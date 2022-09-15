@@ -10,7 +10,7 @@ using ShoppingSmart.Services.ItemsCatalog.Repositories;
 namespace ShoppingSmart.Services.ItemsCatalog.Controllers
 {
     [ApiController]
-    [RouteAttribute("api/smartitem")]
+    [RouteAttribute("api/SmartItem")]
     public class SmartItemController : ControllerBase
     {
         private readonly ISmartItemRepository _smartItemRepository;
@@ -31,6 +31,7 @@ namespace ShoppingSmart.Services.ItemsCatalog.Controllers
         public async Task<IActionResult> GetSmartItemByIdAsync(Guid Id)
         {
             var smartItem = await _smartItemRepository.GetSmartItemByIdAsync(Id);
+
             return Ok(smartItem);
         }
     }

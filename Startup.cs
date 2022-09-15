@@ -30,10 +30,9 @@ namespace ShoppingSmart.Services.ItemsCatalog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            var connectionString = Configuration["ConnectionStrings:DefaultConnection"];
-
-            services.AddDbContext<ItemCatalogDbContext>(options =>
-                options.UseSqlServer(connectionString));
+            //var connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            //services.AddDbContext<ItemCatalogDbContext>(options =>
+                //options.UseSqlServer(connectionString));
             services.AddScoped<ISmartItemRepository, SmartItemRepository>();
 
             //services.AddAutoMapper();
@@ -42,7 +41,7 @@ namespace ShoppingSmart.Services.ItemsCatalog
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            DatabaseManagementService.MigrationInitialization(app);
+            //DatabaseManagementService.MigrationInitialization(app);
 
             if (env.IsDevelopment())
             {

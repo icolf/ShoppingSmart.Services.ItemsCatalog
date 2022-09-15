@@ -12,19 +12,39 @@ namespace ShoppingSmart.Services.ItemsCatalog.Repositories
     {
         private readonly ItemCatalogDbContext _itemCatalogDbContext;
 
-        public SmartItemRepository(ItemCatalogDbContext itemCatalogDbContext)
+        //public SmartItemRepository(ItemCatalogDbContext itemCatalogDbContext)
+        //{
+        //    //_itemCatalogDbContext = itemCatalogDbContext;
+        //}
+
+        public SmartItemRepository()
         {
-            _itemCatalogDbContext = itemCatalogDbContext;
+                
         }
 
         public async Task<IEnumerable<SmartItem>> GetAllSmartItemsAsync()
         {
-            return await _itemCatalogDbContext.SmartItems.ToListAsync();
+            var smartItems = new List<SmartItem>
+            {
+                new SmartItem
+                {
+                    Name = "Icol", Description = "Keyboard logi", BrandName = "logi", Price = (decimal) 12.99
+                }
+            };
+            return smartItems;
+            //return await _itemCatalogDbContext.SmartItems.ToListAsync();
         }
 
         public async Task<SmartItem> GetSmartItemByIdAsync(Guid smartItem)
         {
-            return await _itemCatalogDbContext.SmartItems.Where(i => i.Id == smartItem).FirstOrDefaultAsync();
+            var smartItemToReturn = new SmartItem();
+            smartItemToReturn.Name = "Icol";
+            smartItemToReturn.Description = "Keyboard logi";
+            smartItemToReturn.BrandName = "logi";
+            smartItemToReturn.Price = (decimal)12.99;
+            return smartItemToReturn;
+
+            //return await _itemCatalogDbContext.SmartItems.Where(i => i.Id == smartItem).FirstOrDefaultAsync();
         }
     }
 }
