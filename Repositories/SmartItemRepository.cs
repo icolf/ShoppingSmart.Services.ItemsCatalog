@@ -28,7 +28,7 @@ namespace ShoppingSmart.Services.ItemsCatalog.Repositories
             {
                 new SmartItem
                 {
-                    Name = "Icol", Description = "Keyboard logi", BrandName = "logiMouse", Price = (decimal) 12.99
+                    Name = "Icol", Description = "Keyboard logi", BrandName = "logi", Price = (decimal) 12.99
                 }
             };
             return smartItems;
