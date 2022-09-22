@@ -42,7 +42,9 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
+      - run: echo "step.deploy-to-webapp.outputs.webapp-url = {{ steps.deploy-to-webapp.outputs.webapp-url }}
       - name: Download artifact from build job
+      
         uses: actions/download-artifact@v2
         with:
           name: .net-app
