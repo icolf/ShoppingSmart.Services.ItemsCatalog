@@ -55,5 +55,5 @@ jobs:
         with:
           app-name: 'ShoppingSmart'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_67C862D9158F4C29BEAACB0B68091D2B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_19621A8258604A4593D5997A7B61907B }}
           package: .
