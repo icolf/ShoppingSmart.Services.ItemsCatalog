@@ -22,7 +22,7 @@ jobs:
           dotnet-version: '6.0.x'
           include-prerelease: true
       
-      - run: echo "env.DOTNET_ROOT = ${{env.DOTNET_ROOT}}/myapp/ShoppingSmart.Services.ItemsCatalog.csproj"
+      - run: echo "env.DOTNET_ROOT = ${{env.DOTNET_ROOT}}"
 
       - name: Build with dotnet
         run: dotnet build ShoppingSmart.Services.ItemsCatalog.csproj --configuration Release
@@ -30,7 +30,7 @@ jobs:
       - run: echo "env.DOTNET_ROOT = ${{env.DOTNET_ROOT}}/myapp/ShoppingSmart.Services.ItemsCatalog.csproj"
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish ShoppingSmart.Services.ItemsCatalog.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
