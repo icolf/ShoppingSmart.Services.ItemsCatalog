@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "SmartItem",
+      "launchUrl": "api\\SmartItem\\",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "ShoppingSmart.Services.ItemsCatalog": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "smartitem",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

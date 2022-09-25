@@ -22,13 +22,16 @@ namespace ShoppingSmart.Services.ItemsCatalog.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllSmartItemsAsync()
+        [Route("GetAllSmartItems")]
+        public async Task<IActionResult> GetAllSmartItems()
         {
             var smartItems = await _smartItemRepository.GetAllSmartItemsAsync();
             return Ok(smartItems);
         }
 
-        public async Task<IActionResult> GetSmartItemByIdAsync(Guid Id)
+        [HttpGet]
+        [Route("GetSmartItemById")]
+        public async Task<IActionResult> GetSmartItemById(Guid Id)
         {
             var smartItem = await _smartItemRepository.GetSmartItemByIdAsync(Id);
 
