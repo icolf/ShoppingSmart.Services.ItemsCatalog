@@ -5,7 +5,7 @@
     <UserSecretsId>d1c21f7e-9db6-48e3-a5dc-e61c13a8dd5d</UserSecretsId>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
-    <StartupObject></StartupObject>
+    <StartupObject>ShoppingSmart.Services.ItemsCatalog.Program</StartupObject>
     <DockerComposeProjectPath>docker-compose.dcproj</DockerComposeProjectPath>
     <LangVersion>8</LangVersion>
   </PropertyGroup>
